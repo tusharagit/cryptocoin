@@ -1,0 +1,75 @@
+{
+  "errors": [],
+  "warnings": [],
+  "hash": "ee7986346e7262e8a880",
+  "publicPath": "",
+  "outputPath": "D:\\Development\\cryptocoinbazar\\build\\static",
+  "assetsByChunkName": {
+    "cryptocoinbazar": "cryptocoinbazar.module.js",
+    "list": "list.module.js"
+  },
+  "assets": [
+    {
+      "name": "cryptocoinbazar.module.js",
+      "size": 6906055,
+      "chunks": [
+        "cryptocoinbazar"
+      ],
+      "chunkNames": [
+        "cryptocoinbazar"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "list.module.js",
+      "size": 47156,
+      "chunks": [
+        "list"
+      ],
+      "chunkNames": [
+        "list"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "namedChunkGroups": {
+    "cryptocoinbazar": {
+      "chunks": [
+        "cryptocoinbazar"
+      ],
+      "assets": [
+        "cryptocoinbazar.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "list": {
+      "chunks": [
+        "list"
+      ],
+      "assets": [
+        "list.module.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "cryptocoinbazar",
+      "files": [
+        "cryptocoinbazar.module.js"
+      ]
+    },
+    {
+      "id": "list",
+      "files": [
+        "list.module.js"
+      ]
+    }
+  ]
+}
