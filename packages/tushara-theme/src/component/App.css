@@ -1,0 +1,70 @@
+
+body{
+margin:0px;
+overflow-x: hidden;
+font-family: sans-serif;
+}
+
+.App{
+display: flex;
+min-height: 100vh;
+background-color: #eeeeee;
+}
+
+app-header {
+color: #fff;
+background-color: #2845e3;
+left: 0px !important;
+right: 0px !important;        
+}
+
+app-header{
+box-shadow:-3px 7px 4px -2px rgb(0 0 0 / 40%);
+}
+
+#drawer
+{box-shadow: 3px 16px 15px -1px rgb(0 0 0 / 40%);}
+
+#ironSelector a {
+display: block;
+padding: 0 16px;
+text-decoration: none;
+color: var(--app-secondary-color);
+line-height: 50px;
+outline-color: #ff000000;
+}
+
+#ironSelector iron-icon{
+margin-right: 10px;
+color:#6d6d6d;
+}
+
+#ironSelector a.iron-selected iron-icon{
+color:white;
+}
+
+#ironSelector a.iron-selected {
+color: black;
+background-color: darksalmon;
+color: white ;  
+}      
+
+iron-pages{
+margin-top: 64px;
+display: flex;
+height: 90vh;
+padding: 0;
+background-color: #FFF;
+}     
+
+
+#drawerLayout{
+width: 100vw;  
+}
+
+iron-pages > *{
+background-color: #19222c;
+width: 100%;
+padding: 12px 12px 8px 8px;
+}
+

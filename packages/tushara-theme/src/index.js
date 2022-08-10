@@ -1,21 +1,16 @@
-const Root = () => {
-  return (
-    <>
-      You can edit your package in:
-      <pre>packages\tushara-theme\src\index.js</pre>
-    </>
-  );
-};
+import Root from "./component"
 
-export default {
-  name: "tushara-theme",
+const Tushar = {
+  name: "Tushar",
   roots: {
-    tuhsraTheme: Root
+    theme: Root,
   },
   state: {
-    tuhsraTheme: {}
+    theme: {},
   },
   actions: {
-    tuhsraTheme: {}
-  }
-};
+    theme: {},
+  },
+}
+
+export default Tushar

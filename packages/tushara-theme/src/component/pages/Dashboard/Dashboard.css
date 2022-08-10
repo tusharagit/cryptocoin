@@ -1,0 +1,10 @@
+h1{
+   color:red;
+}
+
+paper-card {
+   --paper-card-header-color: #FFF;
+   --paper-card-background-color : #222e3c; 
+   color: #FFF;
+ }
+
