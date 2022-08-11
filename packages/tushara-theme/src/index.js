@@ -1,7 +1,16 @@
-import Root from "./component"
+import { connect } from "frontity"
+import EntryPoint from './EntryPoint.js';
 
-const Tushar = {
-  name: "Tushar",
+const Root = ({ state }) => {
+  return (
+      <>
+          <EntryPoint/>
+      </>
+  )
+}
+
+const FrontityApp = {
+  name: "FrontityApp",
   roots: {
     theme: Root,
   },
@@ -13,4 +22,4 @@ const Tushar = {
   },
 }
 
-export default Tushar
+export default FrontityApp
