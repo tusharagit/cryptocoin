@@ -6,5 +6,7 @@ paper-card {
    --paper-card-header-color: #FFF;
    --paper-card-background-color : #222e3c; 
    color: #FFF;
+   margin: 12px;
+   border-radius: 12px;
  }
 

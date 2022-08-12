@@ -1,25 +1,53 @@
 import React, {useState, useEffect} from 'react';
-import { connect } from "frontity"
-
-import { Global, css } from "frontity"; 
+import {useDispatch, connect} from 'react-redux';
+import { Global, css  } from "frontity"
 import externalCss from './Dashboard.css';
-import MarketCap from './MarketCap.js';
+import axios from 'axios'
+import { createSelector } from 'reselect'
 
-import { useDispatch } from 'react-redux';
-import firebase from "firebase/app";
-import "firebase/firestore"; // <- needed if using firestore
+import { showGlobal } from '../../../redux/actions/index.js';
+import { API_KEY, GLOBAL_DATA_PATH } from '../../../Constant.js';
+import { getMarketCapital, getMarketVolume } from '../../../customSelector/globalMarket.js';
+import DashCard from './DashCard.js';
 
-const Dashboard = ({ state })  => {
+const Dashboard = ( props )  => {
+   const dispatch = useDispatch()
+
    useEffect(()=>{
-      console.log("in useEffectttt")
+      axios.get(GLOBAL_DATA_PATH, {headers: { 'X-CMC_PRO_API_KEY': API_KEY+1 }
+      })
+      .then((res)=>{
+         console.log(res)
+         dispatch(showGlobal(res.data.data.quote))
+      })
+      .catch((err)=>{console.log(err)})
    },[])
 
     return (
       <div className="Dashboard" name="Dashboard">
-         <MarketCap/>
+         <DashCard heading="Market Capitalization" marketValue={props.marketCap}/>
+         <DashCard heading="Market Volume" marketValue={props.marketVol}/>
          <Global styles={css(externalCss)} />
       </div>
       );
 };
 
-export default connect(Dashboard);
+const mapStateToProps = (state) => {
+   try{
+      return {
+         marketCap : getMarketCapital(state) ,
+         marketVol : getMarketVolume(state)
+      }
+   }catch{(err)=>{
+         console.log(err)
+         return {
+            marketCap : "NULL" ,
+            marketVol : "NULL"
+         }
+      }
+   }
+   
+
+}
+
+export default connect(mapStateToProps)(Dashboard);

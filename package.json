@@ -43,6 +43,7 @@
     "redux": "^4.1.0",
     "redux-firestore": "^0.15.0",
     "redux-thunk": "^2.3.0",
+    "reselect": "^4.1.6",
     "tushara-theme": "file:packages/tushara-theme"
   }
 }
