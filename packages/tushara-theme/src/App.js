@@ -15,7 +15,6 @@ import '@polymer/iron-selector/iron-selector.js';
 import { Link, Redirect} from "react-router-dom";
 
 import { withRouter } from "react-router";
-import Login from './component/pages/Login.js';
 import Dashboard from './component/pages/Dashboard/Dashboard.js';
 import View404 from './component/pages/View404.js';
 import store, { rrfProps } from "./redux/store";
@@ -28,24 +27,26 @@ class App extends React.Component {
       super(props);
     
       this.state = {
-         header: "Note1",
-         content: "Content from state...",
          routePath: "view404"
       }
    }
  
   componentDidMount(){
+    try{
+      document.querySelector('#drawer').shadowRoot.querySelector('#contentContainer').setAttribute('style', 'background-color:#222e3c');
+    }catch{}
+    
     if (this.props.location.pathname === "/"){this.setState({routePath: 'Dashboard'})}
-    if (this.props.location.pathname === "/Login"){this.setState({routePath: 'login'})}
+    if (this.props.location.pathname === "/CryptoTable"){this.setState({routePath: 'CryptoTable'})}
     if (this.props.location.pathname === "/Dashboard"){this.setState({routePath: 'Dashboard'})}
   }
 
-  linkClick1() {this.setState({routePath: "login"})}
+  linkClick1() {this.setState({routePath: "CryptoTable"})}
   linkClick2() {this.setState({routePath: "Dashboard"})} 
 
   render() {
 
-    if (this.props.location.pathname == "/"){ return <Redirect to="/Login" /> ;}
+    if (this.props.location.pathname == "/"){ return <Redirect to="/Dashboard" /> ;}
 
     return (
       <div className="App">
@@ -54,7 +55,7 @@ class App extends React.Component {
         <app-header-layout>
           <app-header slot="header" fixed>
               <app-toolbar>
-                <div id ="mainTitle" >CryptoCoinBazar = {this.state.routePath}</div>
+                <div id ="mainTitle" >CryptoCoinBazar</div>
               </app-toolbar>
           </app-header>
 
@@ -63,7 +64,7 @@ class App extends React.Component {
                   <app-toolbar>Menu</app-toolbar>
                           <iron-selector id="ironSelector" selected={this.state.routePath} attr-for-selected="name" role="navigation">
                             <Link name="Dashboard" to="/Dashboard" onClick={() => this.linkClick2()}>Dashboard</Link>
-                            <Link name="login" to="/Login" onClick={() => this.linkClick1()}>login</Link>                            
+                            <Link name="CryptoTable" to="/CryptoTable" onClick={() => this.linkClick1()}>CryptoTable</Link>                            
                           </iron-selector>              
               </app-drawer>
               <iron-pages 
@@ -71,7 +72,6 @@ class App extends React.Component {
                   attr-for-selected="name"
                   fallback-selection="view404"
                   role="main">
-                    <Login name="login"></Login>
                     <Dashboard name="Dashboard"></Dashboard>
                     <View404 name="view404"></View404>
               </iron-pages>            

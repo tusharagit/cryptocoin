@@ -1,3 +1,2 @@
 export const SHOW_GLOBAL = "SHOW_GLOBAL"
-export const DELETE_ITEM = "DELETE_ITEM"
-export const UPDATE_ITEM = "UPDATE_ITEM"
+export const SHOW_CRYPTO = "SHOW_CRYPTO"

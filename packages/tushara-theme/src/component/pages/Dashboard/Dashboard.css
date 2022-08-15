@@ -10,3 +10,16 @@ paper-card {
    border-radius: 12px;
  }
 
+ .tableWrapper.MuiPaper-root{
+   margin: 10px;
+   width: 98%;
+   background-color: #222e3c;
+ }
+
+ .tdDiv.MuiTableCell-root{
+   border-bottom: 1px solid rgb(35 42 50);
+ }
+
+ .tdHead.MuiTableCell-root{
+   font-size: 15px;
+ }

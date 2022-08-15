@@ -1,8 +1,9 @@
-
+html {background-color: #19222c}
 body{
 margin:0px;
 overflow-x: hidden;
 font-family: sans-serif;
+background-color: #19222c
 }
 
 .App{
@@ -29,7 +30,7 @@ box-shadow:-3px 7px 4px -2px rgb(0 0 0 / 40%);
 display: block;
 padding: 0 16px;
 text-decoration: none;
-color: var(--app-secondary-color);
+color: gray;
 line-height: 50px;
 outline-color: #ff000000;
 }
@@ -44,8 +45,7 @@ color:white;
 }
 
 #ironSelector a.iron-selected {
-color: black;
-background-color: darksalmon;
+background:linear-gradient(90deg,rgba(59,125,221,.1),rgba(59,125,221,.088) 50%,hsla(0,0%,100%,0));
 color: white ;  
 }      
 
@@ -59,7 +59,7 @@ background-color: #FFF;
 
 
 #drawerLayout{
-width: 100vw;  
+width: 98.5vw;  
 }
 
 iron-pages > *{

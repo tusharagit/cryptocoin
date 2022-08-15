@@ -9,9 +9,7 @@ const {heading, marketValue} = props
       <>
          <paper-card heading={heading} className="cardBg">
             <div className="card-content">$ {marketValue} Billion</div>
-            <div className="card-actions">
-               <paper-button>Refresh</paper-button>
-            </div>
+
          </paper-card>         
          <Global styles={css(externalCss)} />
       </>

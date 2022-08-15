@@ -1,7 +1,4 @@
-const initialState = {
-    flag: true,
-    data: []
-}
+const initialState = {}
 
 const storeData = (state = initialState, action) => {
     switch(action.type){
@@ -9,10 +6,10 @@ const storeData = (state = initialState, action) => {
             return{
                 ...state, data: action.payload
             };
-        case "DELETE_ITEM":
-            return{};
-        case "UPDATE_ITEM":
-            return{};             
+        case "SHOW_CRYPTO":
+            return{
+                ...state, cryptoPrice: action.payload
+            };           
         default:
             return state;
     }

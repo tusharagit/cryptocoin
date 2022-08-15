@@ -4,11 +4,11 @@ import { HashRouter } from 'react-router-dom'
 
 
 export default function AwaitApp() {
-  return <div>
+  return <>
         <HashRouter>
             <App />
         </HashRouter>
-    </div>;
+    </>;
 }
 
 
