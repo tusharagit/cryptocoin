@@ -64,7 +64,12 @@ class App extends React.Component {
                   <app-toolbar>Menu</app-toolbar>
                           <iron-selector id="ironSelector" selected={this.state.routePath} attr-for-selected="name" role="navigation">
                             <Link name="Dashboard" to="/Dashboard" onClick={() => this.linkClick2()}>Dashboard</Link>
-                            <Link name="CryptoTable" to="/CryptoTable" onClick={() => this.linkClick1()}>CryptoTable</Link>                            
+                            <Link name="CryptoTable" to="/CryptoTable" onClick={() => this.linkClick1()}>News</Link>                            
+                            <Link>History</Link>
+                            <Link>Account</Link>
+                            <Link>Exchanges</Link>  
+                            <Link>Games</Link>
+                            <Link>Blockchain</Link>
                           </iron-selector>              
               </app-drawer>
               <iron-pages 

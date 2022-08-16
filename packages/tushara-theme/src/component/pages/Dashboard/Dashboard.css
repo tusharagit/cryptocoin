@@ -22,4 +22,27 @@ paper-card {
 
  .tdHead.MuiTableCell-root{
    font-size: 15px;
+   color:#FFF
  }
+
+ .fColor.MuiTableCell-root{
+  color:#FFF
+ }
+
+ .newsContainer{
+  min-height: 100vh;
+  background-color: #222e3c;
+  margin: 12px;
+  border-radius: 12px;
+}
+
+.newscontent{
+  background-color:#222e3c;
+  color:#9e9e9e;
+}
+
+.newscontent a{
+ color:#FFF;
+ text-decoration: none;
+}
+

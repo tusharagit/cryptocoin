@@ -1,4 +1,4 @@
-import {SHOW_GLOBAL, SHOW_CRYPTO} from './type';
+import {SHOW_GLOBAL, SHOW_CRYPTO, SHOW_NEWS} from './type';
 
 export const showGlobal = (payloadData) => ({
     type: SHOW_GLOBAL,
@@ -7,5 +7,10 @@ export const showGlobal = (payloadData) => ({
 
 export const showCrypto = (payloadData) => ({
     type: SHOW_CRYPTO,
+    payload: payloadData
+});
+
+export const showNews = (payloadData) => ({
+    type: SHOW_NEWS,
     payload: payloadData
 });

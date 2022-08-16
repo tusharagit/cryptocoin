@@ -10,7 +10,9 @@ import { API_KEY, GLOBAL_DATA_PATH } from '../../../Constant.js';
 import { getMarketCapital, getMarketVolume } from '../../../customSelector/globalMarket.js';
 import DashCard from './DashCard.js';
 import DashTable from './DashTable.js';
+import DashNews from './DashNews.js';
 
+import Grid from '@mui/material/Grid';
 
 
 const Dashboard = ( props )  => {
@@ -27,9 +29,16 @@ const Dashboard = ( props )  => {
 
     return (
       <div className="Dashboard" name="Dashboard">
-            <DashCard heading="Market Capitalization" marketValue={props.marketCap}/>
-            <DashCard heading="Market Volume" marketValue={props.marketVol}/>
-            <DashTable/>
+         <Grid container spacing={1}>
+            <Grid item xs={12} sm={12} md={8} lg={8}>
+               <DashCard heading="Market Capitalization" marketValue={props.marketCap}/>
+               <DashCard heading="Market Volume" marketValue={props.marketVol}/>
+               <DashTable/>
+            </Grid>
+            <Grid item s={12} sm={12} md={4} lg={4}>
+               <DashNews/>
+            </Grid>
+         </Grid>
          <Global styles={css(externalCss)} />
       </div>
       );
@@ -49,7 +58,6 @@ const mapStateToProps = (state) => {
          }
       }
    }
-   
 
 }
 
