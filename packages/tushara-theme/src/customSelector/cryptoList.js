@@ -10,6 +10,5 @@ export const allCryptoList = createSelector(allCrypto, (value) => {
             flag: (parseInt(value[item].percent_change_24h) > 0) ? "#12e412" : "#ff0b0b"
         }
     })
-    console.log(output)
     return output;
 });

@@ -1,14 +1,4 @@
-h1{
-   color:red;
-}
 
-paper-card {
-   --paper-card-header-color: #FFF;
-   --paper-card-background-color : #222e3c; 
-   color: #FFF;
-   margin: 12px;
-   border-radius: 12px;
- }
 
  .tableWrapper.MuiPaper-root{
    margin: 10px;
@@ -45,4 +35,47 @@ paper-card {
  color:#FFF;
  text-decoration: none;
 }
+
+.loadingBox.MuiBox-root{
+  background-color:#222e3c;
+   border-radius: 5px;
+}
+
+
+/*card*/
+
+.globalcard.MuiPaper-root{
+  margin: 12px;
+  border-radius: 12px;  
+  background-color : #222e3c; 
+  color: #FFF;
+ }
+
+
+ .MuiTypography-root{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; 
+  color: #FFF; 
+  text-align: center;
+ }
+
+ .MuiTypography-root svg{
+  margin-right: 14px;
+  color: #FFF; 
+ }
+
+.Topwrapper, .Topwrapper>.MuiPaper-root, .Topwrapper>.MuiPaper-root>.MuiCardContent-root{
+  display: flex;
+}
+
+.Topwrapper>.MuiPaper-root>.MuiCardContent-root{
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chipWrapper .MuiChip-root{
+  margin: 5px;
+}
+
 

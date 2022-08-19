@@ -11,29 +11,34 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 
 import externalCss from './Dashboard.css';
 import Loading from './Loading.js';
-import { API_KEY, CRYPTO_PRICE } from '../../../Constant.js';
 import { showCrypto } from '../../../redux/actions/index.js';
 import {allCryptoList} from '../../../customSelector/cryptoList.js';
 
 const DashTable = (props)  => {
   const dispatch = useDispatch()
+  const [loadMoreStart, loadMoreClick] = useState(1)
 
   useEffect(()=>{
-    axios.get(CRYPTO_PRICE, {headers: { 'X-CMC_PRO_API_KEY': API_KEY }
-    })
+    axios.get("https://myapi-9bo5iger1-tushar-acharekar.vercel.app/api/cryptoList?loadMoreStart="+loadMoreStart)
     .then((res)=>{
+      console.log(res)
        dispatch(showCrypto(res))
     })
     .catch((err)=>{console.log(err)})
- },[])
+ },[loadMoreStart])
+
+  const loadMoreFun = () => {
+    loadMoreClick(loadMoreStart+10)
+  }
 
    return (
       <div className="DashTable" name="DashTable">
-            <TableContainer className="tableWrapper" component={Paper}>
-              <Table aria-label="simple table">
+            <TableContainer size="small" className="tableWrapper" component={Paper}>
+              <Table size="medium" aria-label="simple table">
                 <TableHead>
                   <TableRow>
                     <TableCell className="tdDiv tdHead">Rank </TableCell>
@@ -57,6 +62,11 @@ const DashTable = (props)  => {
                         )
                       })                       
                   }
+                          <TableRow>     
+                            <TableCell align="center" className="tdDiv fColor" colSpan={4}>
+                              <Button size="small" onClick={loadMoreFun}>Load More</Button>
+                            </TableCell>
+                          </TableRow>                  
                 </TableBody>
               </Table>
             </TableContainer>

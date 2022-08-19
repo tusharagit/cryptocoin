@@ -37,11 +37,11 @@ class App extends React.Component {
     }catch{}
     
     if (this.props.location.pathname === "/"){this.setState({routePath: 'Dashboard'})}
-    if (this.props.location.pathname === "/CryptoTable"){this.setState({routePath: 'CryptoTable'})}
+    if (this.props.location.pathname === "/News"){this.setState({routePath: 'News'})}
     if (this.props.location.pathname === "/Dashboard"){this.setState({routePath: 'Dashboard'})}
   }
 
-  linkClick1() {this.setState({routePath: "CryptoTable"})}
+  linkClick1() {this.setState({routePath: "News"})}
   linkClick2() {this.setState({routePath: "Dashboard"})} 
 
   render() {
@@ -64,7 +64,7 @@ class App extends React.Component {
                   <app-toolbar>Menu</app-toolbar>
                           <iron-selector id="ironSelector" selected={this.state.routePath} attr-for-selected="name" role="navigation">
                             <Link name="Dashboard" to="/Dashboard" onClick={() => this.linkClick2()}>Dashboard</Link>
-                            <Link name="CryptoTable" to="/CryptoTable" onClick={() => this.linkClick1()}>News</Link>                            
+                            <Link name="News" to="/News" onClick={() => this.linkClick1()}>News</Link>                            
                             <Link>History</Link>
                             <Link>Account</Link>
                             <Link>Exchanges</Link>  

@@ -9,19 +9,33 @@ const Loading = (props)  => {
       <>
       {
         props.comType == "news"?
-        <Box sx={{ width: "98%"}}>
+        <>
           <Skeleton animation="wave" /><Skeleton sx={{ marginBottom: "5px"}}/><Skeleton variant="rectangular" height={118} />
           <Skeleton animation="wave" /><Skeleton sx={{ marginBottom: "5px"}}/><Skeleton variant="rectangular" height={118} />
           <Skeleton animation="wave" /><Skeleton sx={{ marginBottom: "5px"}}/><Skeleton variant="rectangular" height={118} />
           <Skeleton animation="wave" /><Skeleton sx={{ marginBottom: "5px"}}/><Skeleton variant="rectangular" height={118} />
-        </Box>
+        </>
         :
         <TableRow> 
-          <TableCell colSpan={4}>
+          <TableCell sx={{ borderBottom: "0px"}} colSpan={4}>
             <Box sx={{ width: "98%" }}>
               <Skeleton />
               <Skeleton animation="wave" />
               <Skeleton animation={false} />
+              <Skeleton />
+              <Skeleton animation="wave" />
+              <Skeleton animation={false} />
+              <Skeleton />
+              <Skeleton animation="wave" />
+              <Skeleton animation={false} />
+              <Skeleton />
+              <Skeleton animation="wave" />
+              <Skeleton animation={false} />      
+              <Skeleton />
+              <Skeleton animation="wave" />
+              <Skeleton animation={false} />
+              <Skeleton />
+                                                  
             </Box>
           </TableCell>
         </TableRow>         
