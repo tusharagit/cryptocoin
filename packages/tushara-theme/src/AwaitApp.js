@@ -1,18 +1,17 @@
-import App from './App';
-import { BrowserRouter as Router } from "react-router-dom";
-import { HashRouter } from 'react-router-dom'
+import Dashboard from './component/Dashboard/Dashboard';
+import store, { rrfProps } from "./redux/store";
+import { Provider } from "react-redux";
+import { ReactReduxFirebaseProvider } from "react-redux-firebase";
+import React, {useState, useEffect} from 'react';
 
-
-export default function AwaitApp() {
-  return <>
-        <HashRouter>
-            <App />
-        </HashRouter>
-    </>;
+const AwaitApp = (props)  => {
+    return(
+        <>
+            <Provider store={store}>
+                    <Dashboard/>
+            </Provider>        
+        </>  
+    )
 }
-
-
-
-
-
+export default (AwaitApp);
 

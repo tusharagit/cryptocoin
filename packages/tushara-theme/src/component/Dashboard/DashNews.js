@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 
-import { showNews } from '../../../redux/actions/index.js';
+import { showNews } from '../../redux/actions/index.js';
 import Loading from './Loading.js';
 
 const DashNews = (props)  => {
@@ -23,9 +23,7 @@ const DashNews = (props)  => {
     useEffect(()=>{
         if(allowNews !== 0){
             axios.get("https://myapi-9bo5iger1-tushar-acharekar.vercel.app/api/cryptoNews?loadMoreStart="+loadMoreStart)
-            .then((res)=>{     
-                console.log("SSSSS")
-                console.log(res)      
+            .then((res)=>{         
                 dispatch(showNews(res))
             })
             .catch((err)=>{console.log(err)})
@@ -56,7 +54,7 @@ const DashNews = (props)  => {
                             <Typography gutterBottom variant="subtitle1">
                                 <a href= {props.cryptoNews[p].url}>{props.cryptoNews[p].title}</a>
                             </Typography>
-                            <Typography variant="body2">{props.cryptoNews[p].description}</Typography>
+                            <Typography sx={{fontSize:"12px"}} variant="body2">{props.cryptoNews[p].description}</Typography>
                         </CardContent>
                     </Card>
                 )

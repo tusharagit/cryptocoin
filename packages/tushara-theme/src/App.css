@@ -35,6 +35,15 @@ line-height: 50px;
 outline-color: #ff000000;
 }
 
+.menu{
+    display: block;
+    padding: 0 16px;
+    text-decoration: none;
+    color: gray;
+    line-height: 50px;
+    outline-color: #ff000000;
+    }
+
 #ironSelector iron-icon{
 margin-right: 10px;
 color:#6d6d6d;

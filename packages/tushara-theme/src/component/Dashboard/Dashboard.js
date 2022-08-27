@@ -5,8 +5,8 @@ import externalCss from './Dashboard.css';
 import axios from 'axios'
 import Grid from '@mui/material/Grid'
 
-import { showGlobal } from '../../../redux/actions/index.js';
-import { getMarketCapital, getMarketVolume } from '../../../customSelector/globalMarket.js';
+import { showGlobal } from '../../redux/actions/index.js';
+import { getMarketCapital, getMarketVolume } from '../../customSelector/globalMarket.js';
 import DashCard from './DashCard.js';
 import DashTable from './DashTable.js';
 import DashNews from './DashNews.js';
@@ -18,6 +18,7 @@ const Dashboard = ( props )  => {
    useEffect(()=>{
       axios.get("https://myapi-9bo5iger1-tushar-acharekar.vercel.app/api/globalData")
       .then((res)=>{
+         console.log(res)
          dispatch(showGlobal(res.data.data.quote))
       })
       .catch((err)=>{console.log(err)})

@@ -33,7 +33,6 @@
 
 .newscontent a{
  color:#FFF;
- text-decoration: none;
 }
 
 .loadingBox.MuiBox-root{
@@ -57,7 +56,6 @@
   align-items: center;
   justify-content: flex-start; 
   color: #FFF; 
-  text-align: center;
  }
 
  .MuiTypography-root svg{

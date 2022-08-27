@@ -1,24 +1,15 @@
-import { connect } from "frontity"
-import EntryPoint from './EntryPoint.js';
-
-const Root = ({ state }) => {
-  return (
-      <>
-          <EntryPoint/>
-      </>
-  )
-}
+import Root from "./component"
 
 const FrontityApp = {
-  name: "FrontityApp",
+  name: "tushara-theme",
   roots: {
     theme: Root,
   },
   state: {
-    theme: {},
+    theme: {}
   },
   actions: {
-    theme: {},
+    theme: {}
   },
 }
 

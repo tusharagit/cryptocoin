@@ -15,8 +15,8 @@ import Button from '@mui/material/Button';
 
 import externalCss from './Dashboard.css';
 import Loading from './Loading.js';
-import { showCrypto } from '../../../redux/actions/index.js';
-import {allCryptoList} from '../../../customSelector/cryptoList.js';
+import { showCrypto } from '../../redux/actions/index.js';
+import {allCryptoList} from '../../customSelector/cryptoList.js';
 
 const DashTable = (props)  => {
   const dispatch = useDispatch()
