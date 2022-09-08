@@ -13,18 +13,17 @@ import React, {useState, useEffect} from 'react';
 
 import externalCss from './App.css';
 import EntryPoint from './EntryPoint.js';
-import Test from './Test.js';
-
+import Articles from './component/Articles.js';
+import Post from './component/Post.js';
 
 const drawerWidth = 240;
 
 const MainLayout = (state) => {
-  console.log("in main.......................................")
-  console.log(state)
-
-  const menuClick = (str) =>{
-    state.actions.router.set(str)
-  }
+  const data = state.state.source.get(state.state.router.link);
+  useEffect(() =>{
+    console.log("in main.......................................")
+    console.log(state)
+  })
   return (
     <>
           <Box sx={{ display: 'flex' }}>
@@ -36,6 +35,7 @@ const MainLayout = (state) => {
             </AppBar>
             <Drawer
               variant="permanent"
+              className="appDrawer"
               sx={{
                 width: drawerWidth,
                 flexShrink: 0,
@@ -44,9 +44,9 @@ const MainLayout = (state) => {
             >
               <Toolbar />
               <Box sx={{ overflow: 'auto' }}>
-                    <Link className="menu" onClick={()=>state.actions.router.set("/")}>Dashboard</Link>                
-                    <Link className="menu" onClick={()=>state.actions.router.set("/news")}>News</Link>                            
-                    <Link className="menu" link="/">History</Link>
+                    <Link className={state.state.router.link == "/"? "menu selected" : "menu"} onClick={()=>state.actions.router.set("/")}>Dashboard</Link>                
+                    <Link className={state.state.router.link == "/articles/"? "menu selected" : "menu"} onClick={()=>state.actions.router.set("/articles")}>Articles</Link>                            
+                    <Link className="menu" link="/">News</Link>
                     <Link className="menu" link="/">Account</Link>
                     <Link className="menu" link="/">Exchanges</Link>  
                     <Link className="menu" link="/">Games</Link>
@@ -58,7 +58,8 @@ const MainLayout = (state) => {
               <Typography paragraph>
                 <Switch>
                   <EntryPoint when={state.state.router.link == "/"}/>
-                  <Test when={state.state.router.link == "/news/"}/>
+                  <Articles when={state.state.router.link == "/articles/"}/>
+                  <Post when={data.isPostType} />
                 </Switch>
               </Typography>
             </Box>

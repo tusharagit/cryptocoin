@@ -10,12 +10,31 @@ const settings = {
   "packages": [
     {
       "name": "tushara-theme" ,     
+      "state": {
+        "theme": {
+          "menu": [
+            [
+              "Home",
+              "/"
+            ],
+            [
+              "articles",
+              "/articles/"
+            ]
+          ],
+          "featured": {
+            "showOnList": false,
+            "showOnPost": false
+          }
+        }
+      }      
     },
     {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "url": "https://tyserwork.wordpress.com/"
+          "url": "https://tyserwork.wordpress.com/",
+          "postsPage":"/articles/"         
         }
       }
     },

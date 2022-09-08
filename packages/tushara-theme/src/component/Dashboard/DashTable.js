@@ -25,7 +25,6 @@ const DashTable = (props)  => {
   useEffect(()=>{
     axios.get("https://myapi-9bo5iger1-tushar-acharekar.vercel.app/api/cryptoList?loadMoreStart="+loadMoreStart)
     .then((res)=>{
-      console.log(res)
        dispatch(showCrypto(res))
     })
     .catch((err)=>{console.log(err)})

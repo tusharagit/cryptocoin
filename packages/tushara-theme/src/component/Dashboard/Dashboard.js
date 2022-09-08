@@ -18,7 +18,6 @@ const Dashboard = ( props )  => {
    useEffect(()=>{
       axios.get("https://myapi-9bo5iger1-tushar-acharekar.vercel.app/api/globalData")
       .then((res)=>{
-         console.log(res)
          dispatch(showGlobal(res.data.data.quote))
       })
       .catch((err)=>{console.log(err)})

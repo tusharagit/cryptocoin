@@ -1,38 +1,10 @@
 html {background-color: #19222c}
+
 body{
-margin:0px;
-overflow-x: hidden;
-font-family: sans-serif;
-background-color: #19222c
-}
-
-.App{
-display: flex;
-min-height: 100vh;
-background-color: #19222c;
-}
-
-app-header {
-color: #fff;
-background-color: #2845e3;
-left: 0px !important;
-right: 0px !important;        
-}
-
-app-header{
-box-shadow:-3px 7px 4px -2px rgb(0 0 0 / 40%);
-}
-
-#drawer
-{box-shadow: 3px 16px 15px -1px rgb(0 0 0 / 40%);}
-
-#ironSelector a {
-display: block;
-padding: 0 16px;
-text-decoration: none;
-color: gray;
-line-height: 50px;
-outline-color: #ff000000;
+    margin:0px;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: #19222c
 }
 
 .menu{
@@ -42,38 +14,13 @@ outline-color: #ff000000;
     color: gray;
     line-height: 50px;
     outline-color: #ff000000;
-    }
+ }
 
-#ironSelector iron-icon{
-margin-right: 10px;
-color:#6d6d6d;
+.menu.selected {
+    background:linear-gradient(90deg,rgba(59,125,221,.1),rgba(59,125,221,.088) 50%,hsla(0,0%,100%,0));
+    color: white ;  
+} 
+
+.appDrawer .MuiPaper-root{
+    background-color: #222e3c;
 }
-
-#ironSelector a.iron-selected iron-icon{
-color:white;
-}
-
-#ironSelector a.iron-selected {
-background:linear-gradient(90deg,rgba(59,125,221,.1),rgba(59,125,221,.088) 50%,hsla(0,0%,100%,0));
-color: white ;  
-}      
-
-iron-pages{
-margin-top: 64px;
-display: flex;
-height: 90vh;
-padding: 0;
-background-color: #FFF;
-}     
-
-
-#drawerLayout{
-width: 98.5vw;  
-}
-
-iron-pages > *{
-background-color: #19222c;
-width: 100%;
-padding: 12px 12px 8px 8px;
-}
-
