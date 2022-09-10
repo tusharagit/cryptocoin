@@ -1,30 +1,15 @@
+ /******* news ********/
 
-
- .tableWrapper.MuiPaper-root{
-   margin: 10px;
-   width: 98%;
-   background-color: #222e3c;
- }
-
- .tdDiv.MuiTableCell-root{
-   border-bottom: 1px solid rgb(35 42 50);
- }
-
- .tdHead.MuiTableCell-root{
-   font-size: 15px;
-   color:#FFF
- }
-
- .fColor.MuiTableCell-root{
-  color:#FFF
- }
-
- .newsContainer{
-  min-height: 100vh;
-  background-color: #222e3c;
-  margin: 12px;
-  border-radius: 12px;
+ @media screen and (max-width: 899px) {
+  .newsWrapper.MuiGrid-root{
+    margin: 10px;
+   }
 }
+
+
+ .newsCard.MuiPaper-root{
+  background-color: #222e3c;
+ }
 
 .newscontent{
   background-color:#222e3c;
@@ -33,7 +18,13 @@
 
 .newscontent a{
  color:#FFF;
+ text-decoration: none;
+ line-height: 1.3;
 }
+.newscontent a:hover{
+  color:rgb(20 7 255);
+  text-decoration: underline;
+ }
 
 .loadingBox.MuiBox-root{
   background-color:#222e3c;
@@ -72,8 +63,52 @@
   justify-content: space-between;
 }
 
-.chipWrapper .MuiChip-root{
-  margin: 5px;
+
+/******* table ********/
+.DashTable{
+  margin: 0px 12px 0px 0px;
 }
 
+.componenSwitch.MuiBox-root{
+  padding: 24px 12px;
+}
 
+.loadmoreWrapper{
+  display: flex;
+  justify-content: center;
+  background-color: #222e3c;
+  padding: 8px;
+}
+
+.loadmoreWrapper button{
+  display: flex;
+}
+
+.tableWrapper.MuiPaper-root{
+  margin: 10px;
+  width: 98%;
+  background-color: #222e3c;
+}
+
+.tdDiv.MuiTableCell-root{
+  border-bottom: 1px solid rgb(35 42 50);
+}
+
+.tdHead.MuiTableCell-root{
+  font-size: 15px;
+  color:#FFF
+}
+
+.fColor.MuiTableCell-root{
+ color:#FFF
+}
+
+/******* Topics ********/
+
+.chipWrapper .MuiChip-root{
+  margin: 4px;
+}
+.chipWrapper span{
+  padding: 8px;
+  font-size: 12px;
+}

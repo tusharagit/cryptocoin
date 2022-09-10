@@ -42,8 +42,8 @@ const DashNews = (props)  => {
       <>
         {
             (typeof props.cryptoNews === 'null' || typeof props.cryptoNews ==='undefined') ? 
-                <Box className="loadingBox" sx={{ width: "98%"}}>
-                    <Switch sx={{marginLeft:"25%"}} onChange={allowNewsfun}/><Typography sx={{display:"inline"}} variant="subtitle1">Activate News Section</Typography>
+                <Box className="loadingBox news" sx={{ width: "100%"}}>
+                    <Switch sx={{marginLeft:"12%"}} onChange={allowNewsfun}/><Typography sx={{display:"inline"}} variant="subtitle1">Activate News </Typography>
                     <Loading comType="news" />
                 </Box>
             :Object.keys(props.cryptoNews).map((p)=>{
@@ -60,7 +60,7 @@ const DashNews = (props)  => {
                 )
             })                       
         } 
-        <Button size="small" onClick={loadMoreFun}>Load More</Button>     
+         <div className='loadmoreWrapper'><Button size="small" onClick={loadMoreFun}>Load More</Button></div>
         <Global styles={css(externalCss)} />
       </>
       );

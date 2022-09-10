@@ -14,6 +14,7 @@ const Loading = (props)  => {
           <Skeleton animation="wave" /><Skeleton sx={{ marginBottom: "5px"}}/><Skeleton variant="rectangular" height={118} />
           <Skeleton animation="wave" /><Skeleton sx={{ marginBottom: "5px"}}/><Skeleton variant="rectangular" height={118} />
           <Skeleton animation="wave" /><Skeleton sx={{ marginBottom: "5px"}}/><Skeleton variant="rectangular" height={118} />
+          <Skeleton animation="wave" /><Skeleton sx={{ marginBottom: "5px"}}/><Skeleton variant="rectangular" height={118} />
         </>
         :
         <TableRow> 

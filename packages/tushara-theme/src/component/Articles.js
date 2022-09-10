@@ -2,7 +2,7 @@ import { connect } from "frontity"
 import React, {useState, useEffect} from 'react';
 import Link from "@frontity/components/link"
 
-const Test = ({ state, libraries })  => {
+const Articles = ({ state, libraries })  => {
   const Html2React = libraries.html2react.Component;
   const data = state.source.get(state.router.link)
   console.log("in test1.......................................")
@@ -26,5 +26,5 @@ const Test = ({ state, libraries })  => {
         </>  
     )
 }
-export default connect(Test);
+export default connect(Articles);
 

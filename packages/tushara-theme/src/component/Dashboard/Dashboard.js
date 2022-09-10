@@ -34,7 +34,7 @@ const Dashboard = ( props )  => {
                </div>
                <DashTable/>
             </Grid>
-            <Grid item s={12} sm={12} md={4} lg={4}>
+            <Grid className='newsWrapper' item s={12} sm={12} md={4} lg={4}>
                <DashNews/>
             </Grid>
          </Grid>

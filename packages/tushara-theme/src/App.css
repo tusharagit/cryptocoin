@@ -24,3 +24,8 @@ body{
 .appDrawer .MuiPaper-root{
     background-color: #222e3c;
 }
+
+.headerToolbar.MuiToolbar-root{
+    background-color: rgb(20 7 255) ;
+  }
+  
