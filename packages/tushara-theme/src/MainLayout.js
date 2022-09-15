@@ -28,6 +28,10 @@ const MainLayout = (state) => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleDrawerClose = () => {
+    setMobileOpen(false);
+  };
+
   useEffect(() =>{
     console.log("in main.......................................")
     console.log(state)
@@ -67,13 +71,14 @@ const MainLayout = (state) => {
             >
               <Toolbar />
               <Box sx={{ overflow: 'auto' }}>
-                    <Link className={state.state.router.link == "/"? "menu selected" : "menu"} onClick={()=>state.actions.router.set("/")}>Dashboard</Link>                
-                    <Link className={state.state.router.link == "/articles/"? "menu selected" : "menu"} onClick={()=>state.actions.router.set("/articles/")}>Articles</Link>                            
-                    <Link className="menu" link="/">News</Link>
-                    <Link className="menu" link="/">Account</Link>
-                    <Link className="menu" link="/">Exchanges</Link>  
-                    <Link className="menu" link="/">Games</Link>
-                    <Link className="menu" link="/">Blockchain</Link>              
+                    <Link onClick={handleDrawerClose} className={state.state.router.link == "/"? "menu selected" : "menu"} link="/" >Dashboard</Link>                
+                    <Link onClick={handleDrawerClose} className={state.state.router.link == "/articles/"? "menu selected" : "menu"} link="/articles/" >Articles</Link>                            
+                    <Link className={state.state.router.link == "/news"? "menu selected" : "menu"} link="/" >News</Link> 
+                    <Link className={state.state.router.link == "/blockchain"? "menu selected" : "menu"} link="/" >Blockchain</Link> 
+                    <Link className={state.state.router.link == "/cryptogame"? "menu selected" : "menu"} link="/" >Crypto Game</Link> 
+                    <Link className={state.state.router.link == "/cryptohistory"? "menu selected" : "menu"} link="/" >Crypto History</Link>                            
+                    <Link className={state.state.router.link == "/cryptoapr"? "menu selected" : "menu"} link="/" >Crypto APR</Link>                  
+                         
               </Box>          
             </Drawer>            
             <Drawer
@@ -89,16 +94,17 @@ const MainLayout = (state) => {
             >
               <Toolbar />
               <Box sx={{ overflow: 'auto' }}>
-                    <Link className={state.state.router.link == "/"? "menu selected" : "menu"} onClick={()=>state.actions.router.set("/")}>Dashboard</Link>                
-                    <Link className={state.state.router.link == "/articles/"? "menu selected" : "menu"} onClick={()=>state.actions.router.set("/articles/")}>Articles</Link>                            
-                    <Link className="menu" link="/">News</Link>
-                    <Link className="menu" link="/">Account</Link>
-                    <Link className="menu" link="/">Exchanges</Link>  
-                    <Link className="menu" link="/">Games</Link>
-                    <Link className="menu" link="/">Blockchain</Link>              
-              </Box>
+                    <Link className={state.state.router.link == "/"? "menu selected" : "menu"} link="/" >Dashboard</Link>                
+                    <Link className={state.state.router.link == "/articles/"? "menu selected" : "menu"} link="/articles/" >Articles</Link>                            
+                    <Link className={state.state.router.link == "/news"? "menu selected" : "menu"} link="/" >News</Link> 
+                    <Link className={state.state.router.link == "/blockchain"? "menu selected" : "menu"} link="/" >Blockchain</Link> 
+                    <Link className={state.state.router.link == "/cryptogame"? "menu selected" : "menu"} link="/" >Crypto Game</Link> 
+                    <Link className={state.state.router.link == "/cryptohistory"? "menu selected" : "menu"} link="/" >Crypto History</Link>                            
+                    <Link className={state.state.router.link == "/cryptoapr"? "menu selected" : "menu"} link="/" >Crypto APR</Link>                  
+                         
+              </Box>  
             </Drawer>
-            <Box className="componenSwitch" component="main" sx={{ flexGrow: 1, p: 3 }}>
+            <Box className="componenSwitch" component="main" sx={{ width:"100%" }}>
               <Toolbar />
                 <Switch>
                   <EntryPoint when={state.state.router.link == "/"}/>

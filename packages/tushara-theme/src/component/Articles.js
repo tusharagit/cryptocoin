@@ -1,28 +1,23 @@
 import { connect } from "frontity"
 import React, {useState, useEffect} from 'react';
 import Link from "@frontity/components/link"
+import Loading from './Dashboard/Loading.js';
 
-const Articles = ({ state, libraries })  => {
-  const Html2React = libraries.html2react.Component;
-  const data = state.source.get(state.router.link)
-  console.log("in test1.......................................")
-  console.log(data) 
-  console.log(state) 
-  console.log(state.source.post) 
+const Articles = ({ state })  => {
+  const [listdata, listdatafun] = useState({})
+
   useEffect(() =>{
+    listdatafun(state.source.get(state.router.link))
+  },[])
 
-  })
     return(
         <>
-        <div>NEWS NEWS NEWS NEWS NEWS</div>  
           {
-            data.items.map((item)=>{
-              return <h1>
-                <Link className="menu" link={state.source.post[item.id].link}>{state.source.post[item.id].title.rendered}</Link>
-                </h1>
+             ( listdata.items === undefined) ?  <Loading comType="cload" />
+            :listdata.items?.map((item, index)=>{
+                return <Link className="menu" link={state.source.post[item.id].link}>{state.source.post[item.id].title.rendered}</Link> 
             })
           } 
-           
         </>  
     )
 }

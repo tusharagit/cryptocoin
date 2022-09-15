@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-
-function Loading() {
-  return <div>Loading...</div>;
-}
+import Loading from './component/Dashboard/Loading.js';
 
 export default function EntryPoint() {
-  const [comp, setComp] = useState(Loading);
+  const [comp, setComp] = useState(<Loading comType="cload" />);
 
   useEffect(() => {
     const load = async () => {

@@ -3,7 +3,6 @@ import { Global, css } from "frontity";
 import externalCss from './Dashboard.css';
 
 import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import {GoogleCharts} from 'google-charts';
@@ -26,7 +25,7 @@ const DashTopic = (props)  => {
 
     return (
       <>
-        <Card sx={{width:"40%"}} className="globalcard">
+        <Card sx={{width: { xs: '100%', sm:'40%' }}} className="globalcard">
             <CardContent>
                 <div className="chipWrapper">
                     <Chip label="BTC" color="primary" />

@@ -13,7 +13,7 @@ const {heading, marketValue, icon} = props
 
     return (
       <>
-                     <Card sx={{width:"30%"}} className="globalcard">
+                     <Card sx={{width: { xs: '100%', sm:'30%' }}} className="globalcard">
                            <CardContent>
                               <Typography variant="h6" component="div">{heading}</Typography>
                               <Typography variant="body2" component="div" color="#FFF">

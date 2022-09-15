@@ -20,22 +20,22 @@ const Post = ({ state, actions, libraries }) => {
   // Load the post, but only if the data is ready.
   return data.isReady ? (
     <Container>
-      <div>
+      <div className="postTitle">
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
         {/* Hide author and date on pages */}
         {!data.isPage && (
-          <div>
+          <div className="autherDate">
             {author && (
               <StyledLink link={author.link}>
                 <Author>
-                  By <b>{author.name}</b>
+                  By {author.name}
                 </Author>
               </StyledLink>
             )}
             <DateWrapper>
               {" "}
-              on <b>{date.toDateString()}</b>
+              on {date.toDateString()}
             </DateWrapper>
           </div>
         )}
@@ -49,7 +49,7 @@ const Post = ({ state, actions, libraries }) => {
         // Render the content using the Html2React component so the HTML is
         // processed by the processors we included in the
         // libraries.html2react.processors array.
-        <Content>
+        <Content >
           <Html2React html={post.content.rendered} />
         </Content>
       )}
@@ -62,6 +62,16 @@ export default connect(Post);
 const Container = styled.div`
   margin: 0;
   padding: 24px;
+
+  .autherDate  p{
+    color: gray;
+  }
+  
+  .postTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+  }  
 `;
 
 const Title = styled.h1`
@@ -95,7 +105,15 @@ const DateWrapper = styled.p`
 const Content = styled.div`
   color: #eee;
   word-break: break-word;
+  padding: 12px; 
 
+  @media screen and (min-width: 768px) {
+    padding: 24px 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 24px 96px;
+  }
 
   p {
     line-height: 1.6em;

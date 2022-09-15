@@ -27,14 +27,14 @@ const Dashboard = ( props )  => {
       <div className="Dashboard" name="Dashboard">
          <Grid container spacing={1}>
             <Grid item xs={12} sm={12} md={8} lg={8}>
-               <div className="Topwrapper">
-                     <DashCard heading="Market Cap" icon="currency" marketValue={props.marketCap}/>
+               <div  className="Topwrapper">
+                     <DashCard  heading="Market Cap" icon="currency" marketValue={props.marketCap}/>
                      <DashCard heading="Market Volume" icon="volume" marketValue={props.marketVol}/>
                      <DashTopic/>                
                </div>
                <DashTable/>
             </Grid>
-            <Grid className='newsWrapper' item s={12} sm={12} md={4} lg={4}>
+            <Grid className='newsWrapper' item xs={12} sm={12} md={4} lg={4}>
                <DashNews/>
             </Grid>
          </Grid>
