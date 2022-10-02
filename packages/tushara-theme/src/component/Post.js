@@ -19,7 +19,7 @@ const Post = ({ state, actions, libraries }) => {
 
   // Load the post, but only if the data is ready.
   return data.isReady ? (
-    <Container>
+    <>
       <div className="postTitle">
         <Title dangerouslySetInnerHTML={{ __html: post.title.rendered }} />
 
@@ -53,7 +53,7 @@ const Post = ({ state, actions, libraries }) => {
           <Html2React html={post.content.rendered} />
         </Content>
       )}
-    </Container>
+    </>
   ) : null;
 };
 

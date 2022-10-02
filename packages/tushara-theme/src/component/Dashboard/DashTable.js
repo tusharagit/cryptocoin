@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {useDispatch, connect} from 'react-redux';
 import { withRouter } from "react-router";
 import { Global, css } from "frontity"; 
-import axios from 'axios'
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -15,7 +14,7 @@ import Button from '@mui/material/Button';
 
 import externalCss from './Dashboard.css';
 import Loading from './Loading.js';
-import { showCrypto } from '../../redux/actions/index.js';
+import {getCrypto } from '../../redux/actions/cryptoActions.js';
 import {allCryptoList} from '../../customSelector/cryptoList.js';
 
 const DashTable = (props)  => {
@@ -23,11 +22,7 @@ const DashTable = (props)  => {
   const [loadMoreStart, loadMoreClick] = useState(1)
 
   useEffect(()=>{
-    axios.get("https://myapi-9bo5iger1-tushar-acharekar.vercel.app/api/cryptoList?loadMoreStart="+loadMoreStart)
-    .then((res)=>{
-       dispatch(showCrypto(res))
-    })
-    .catch((err)=>{console.log(err)})
+    dispatch(getCrypto(loadMoreStart))
  },[loadMoreStart])
 
   const loadMoreFun = () => {

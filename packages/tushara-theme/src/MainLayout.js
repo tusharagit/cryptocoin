@@ -73,11 +73,11 @@ const MainLayout = (state) => {
               <Box sx={{ overflow: 'auto' }}>
                     <Link onClick={handleDrawerClose} className={state.state.router.link == "/"? "menu selected" : "menu"} link="/" >Dashboard</Link>                
                     <Link onClick={handleDrawerClose} className={state.state.router.link == "/articles/"? "menu selected" : "menu"} link="/articles/" >Articles</Link>                            
-                    <Link className={state.state.router.link == "/news"? "menu selected" : "menu"} link="/" >News</Link> 
-                    <Link className={state.state.router.link == "/blockchain"? "menu selected" : "menu"} link="/" >Blockchain</Link> 
-                    <Link className={state.state.router.link == "/cryptogame"? "menu selected" : "menu"} link="/" >Crypto Game</Link> 
-                    <Link className={state.state.router.link == "/cryptohistory"? "menu selected" : "menu"} link="/" >Crypto History</Link>                            
-                    <Link className={state.state.router.link == "/cryptoapr"? "menu selected" : "menu"} link="/" >Crypto APR</Link>                  
+                    <Link onClick={handleDrawerClose} className={state.state.router.link == "/news"? "menu selected" : "menu"} link="/" >News</Link> 
+                    <Link onClick={handleDrawerClose} className={state.state.router.link == "/blockchain"? "menu selected" : "menu"} link="/" >Blockchain</Link> 
+                    <Link onClick={handleDrawerClose} className={state.state.router.link == "/cryptogame"? "menu selected" : "menu"} link="/" >Crypto Game</Link> 
+                    <Link onClick={handleDrawerClose} className={state.state.router.link == "/cryptohistory"? "menu selected" : "menu"} link="/" >Crypto History</Link>                            
+                    <Link onClick={handleDrawerClose} className={state.state.router.link == "/cryptoapr"? "menu selected" : "menu"} link="/" >Crypto APR</Link>                  
                          
               </Box>          
             </Drawer>            

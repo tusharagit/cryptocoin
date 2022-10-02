@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Switch from '@mui/material/Switch';
 
-import { showNews } from '../../redux/actions/index.js';
+import { showNews } from '../../redux/actions/cryptoActions.js';
 import Loading from './Loading.js';
 
 const DashNews = (props)  => {

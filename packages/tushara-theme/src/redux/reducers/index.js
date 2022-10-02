@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import storeData from './storeData';
+import storeData from './cryptoReducer';
 import {firebaseReducer} from "react-redux-firebase";
 import {firestoreReducer} from "redux-firestore";
 

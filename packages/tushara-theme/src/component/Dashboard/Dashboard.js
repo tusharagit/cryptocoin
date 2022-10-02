@@ -5,7 +5,7 @@ import externalCss from './Dashboard.css';
 import axios from 'axios'
 import Grid from '@mui/material/Grid'
 
-import { showGlobal } from '../../redux/actions/index.js';
+import { showGlobal } from '../../redux/actions/cryptoActions.js';
 import { getMarketCapital, getMarketVolume } from '../../customSelector/globalMarket.js';
 import DashCard from './DashCard.js';
 import DashTable from './DashTable.js';
@@ -25,7 +25,7 @@ const Dashboard = ( props )  => {
 
     return (
       <div className="Dashboard" name="Dashboard">
-         <Grid container spacing={1}>
+         <Grid  spacing={1}>
             <Grid item xs={12} sm={12} md={8} lg={8}>
                <div  className="Topwrapper">
                      <DashCard  heading="Market Cap" icon="currency" marketValue={props.marketCap}/>
