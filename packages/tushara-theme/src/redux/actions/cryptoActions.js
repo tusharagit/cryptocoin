@@ -1,5 +1,8 @@
-import {SHOW_GLOBAL, SHOW_CRYPTO, SHOW_NEWS, GET_CRYPTO} from './actionType';
+import {SHOW_GLOBAL, SHOW_CRYPTO, SHOW_NEWS, GET_CRYPTO, GET_GLOBAL, GET_NEWS} from './actionType';
 
+export const getGlobal = () => ({
+    type: GET_GLOBAL
+});
 export const showGlobal = (payloadData) => ({
     type: SHOW_GLOBAL,
     payload:payloadData
@@ -16,7 +19,10 @@ export const showCrypto = (payloadData) => ({
 });
 
 
-
+export const getNews = (payloadData) => ({
+    type: GET_NEWS,
+    payload: payloadData
+});
 export const showNews = (payloadData) => ({
     type: SHOW_NEWS,
     payload: payloadData

@@ -23,7 +23,7 @@ sagaMiddleware.run(sagaCrypto)
 
 /*******************firebase config******************************** */
 /******************************************************* */
-const firebaseConfig = {
+/*const firebaseConfig = {
   apiKey: "AIzaSyAe7rjj1gIhk_OYOfTlPbwZC1GapwmvJwI",
   authDomain: "myfirestore-3740d.firebaseapp.com",
   projectId: "myfirestore-3740d",
@@ -33,21 +33,21 @@ const firebaseConfig = {
   measurementId: "G-GXM9VE4ZJC"
 };
 
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig)*/
 
 // Initialize other services on firebase instance
-firebase.firestore()
+//firebase.firestore()
 
-const rrfConfig = {
-userProfile: 'users',
-useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
-}
+//const rrfConfig = {
+//userProfile: 'users',
+//useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
+//}
 
-export const rrfProps = {
+/*export const rrfProps = {
   firebase,
   config: rrfConfig,
   dispatch: store.dispatch,
   createFirestoreInstance,
-};
+};*/
 
 export default store;
