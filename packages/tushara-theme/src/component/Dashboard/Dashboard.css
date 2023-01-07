@@ -6,6 +6,15 @@
    }
 }
 
+.MuiTextField-root{
+  background-color: #FFF;
+}
+
+.MuiButton-root{
+  height: 54px;
+  padding-right: 0px;
+  background-color: #0000cd;
+}
 
  .newsCard.MuiPaper-root{
   background-color: #222e3c;
@@ -63,6 +72,37 @@
   justify-content: space-between;
 }
 
+/* advanced news*/
+.newsAdvanceWrapper.MuiGrid-item{
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+}
+
+.newsAdvanceWrapper.MuiGrid-root .newscontent a{
+  color: #07c9b1;
+  font-size: 18px;
+}
+
+.newsAdvanceWrapper.MuiGrid-root .newsAdvanceCard{
+  margin: 5px;
+  border-radius: 10px;
+  background-color: #222e3c;
+}
+
+.newsAdvanceWrapper.MuiGrid-root > * {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.newsAdvanceWrapper.MuiGrid-root .newscontent{
+  height:200px
+}
+
+.newsAdvanceWrapper.MuiGrid-root .loadmoreWrapper {
+  width :100%;
+  margin-top: 10px;
+}
 
 /******* table ********/
 .DashTable{

@@ -41,6 +41,28 @@ const storeData = (state = initialState, action) => {
                 return { ...state, cryptoNews: newsList }
             }
 
+            case "SHOW_ADVANCE_NEWS":
+                const canData = action.payload.data.data.articles
+                const newsAdvanceList = canData.map((news) => {
+                    const { title, url, description, urlToImage } = news
+                    return { title, url, description, urlToImage }
+                })
+    
+                if(action.payload.reset == 1){
+                    return { ...state, cryptoAdvanceNews: newsAdvanceList }
+                }
+                else{
+                    try {
+                        let updatedNewsList = [...state.cryptoAdvanceNews]
+                        newsAdvanceList.forEach((item) => {
+                            updatedNewsList.push(item)
+                        })
+                        return { ...state, cryptoAdvanceNews: updatedNewsList }
+                    } catch {
+                        return { ...state, cryptoAdvanceNews: newsAdvanceList }
+                    }                      
+                }
+          
 
         default:
             return state;

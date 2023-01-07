@@ -4,6 +4,7 @@ export const GET_CRYPTO = "GET_CRYPTO"
 export const SHOW_CRYPTO = "SHOW_CRYPTO"
 export const GET_NEWS = "GET_NEWS"
 export const SHOW_NEWS = "SHOW_NEWS"
-
+export const GET_ADVANCE_NEWS = "GET_ADVANCE_NEWS"
+export const SHOW_ADVANCE_NEWS = "SHOW_ADVANCE_NEWS"
 
 

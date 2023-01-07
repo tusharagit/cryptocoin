@@ -3,13 +3,15 @@ import store, { rrfProps } from "./redux/store";
 import { Provider } from "react-redux";
 //import { ReactReduxFirebaseProvider } from "react-redux-firebase";
 import React, {useState, useEffect} from 'react';
-
+import News from './component/News.js';
 const AwaitApp = (props)  => {
     return(
         <>
-            <Provider store={store}>
-                    <Dashboard/>
-            </Provider>        
+        {
+            props.component == "dashboard" ? <Provider store={store}><Dashboard/></Provider> 
+            : <Provider store={store}><News/></Provider>  
+        }
+                  
         </>  
     )
 }

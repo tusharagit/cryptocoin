@@ -19,9 +19,9 @@ import { allCryptoList } from '../../customSelector/cryptoList.js';
 
 const DashTable = (props) => {
   const dispatch = useDispatch()
-  const [loadMoreStart, loadMoreClick] = useState(1)
+  const [loadMoreStart, loadMoreClick] = useState(1)  //issue is here
 
-  useEffect(() => {
+  useEffect(() => { 
     dispatch(getCrypto(loadMoreStart))
   }, [loadMoreStart])
 
